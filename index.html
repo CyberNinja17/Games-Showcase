@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knife Hit Game</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        #gameContainer {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameContainer"></div>
+    <script>
+        var gameInstance = UnityLoader.instantiate("gameContainer", "Build/KnifeHit.json", {
+            onProgress: UnityProgress,
+            dataUrl: "Build/KnifeHit.data.br",
+            frameworkUrl: "Build/KnifeHit.framework.js.br",
+            codeUrl: "Build/KnifeHit.wasm.br"
+        });
+    </script>
+</body>
+</html>
+
